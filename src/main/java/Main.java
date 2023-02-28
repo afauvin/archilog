@@ -1,6 +1,4 @@
 
-import ui.*;
-
 import javafx.application.Application;
 import javafx.scene.web.WebView;
 import javafx.scene.Scene;
