@@ -6,6 +6,8 @@ import javafx.stage.*;
 import javafx.scene.text.Text;
 import javafx.scene.layout.GridPane;
 
+import java.awt.*;
+
 public class Main extends Application {
 
 	public Main() {}
@@ -57,6 +59,11 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		launch(args);
+		//launch(args);
+		BuilderJfx winJfw = new BuilderJfx();
+		//winJfw.createNewWindows();
+		//winJfw.createRectangle();
+		winJfw.showWindow();
+		winJfw.createRectangle();
 	}
 }
