@@ -1,0 +1,16 @@
+xshape\Rectangle.class
+xshape\ShapeFactory.class
+xshape\ShapeFactoryAwt.class
+xshape\RectangleAwt.class
+xshape\GUIHelper$1.class
+xshape\App.class
+xshape\GUIHelper.class
+xshape\RectangleFx.class
+xshape\AwtApp$JCanvas.class
+xshape\AwtApp.class
+xshape\Shape.class
+xshape\FxApplication.class
+xshape\AwtContext.class
+xshape\FxApp.class
+xshape\ShapeFactoryFx.class
+xshape\XShape.class
