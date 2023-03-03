@@ -1,0 +1,11 @@
+AWT
+
+https://www.developpez.net/forums/d864637/java/interfaces-graphiques-java/debuter/gestions-evenements-souris-dessiner-souris/
+
+https://duj.developpez.com/tutoriels/java/dessin/intro/
+
+
+
+JFX
+
+https://www.labri.fr/perso/johnen/pdf/IUT-Bordeaux/UMLCours/IntroductionJavaFX-V1.pdf

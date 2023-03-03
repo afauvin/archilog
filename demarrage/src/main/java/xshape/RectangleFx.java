@@ -25,12 +25,18 @@ public class RectangleFx extends Rectangle {
 		_adapted.setWidth(size.getX());
 		_adapted.setHeight(size.getY());
 		_adapted.setFill(Color.BLUE);
-		_adapted.setOnMouseClicked(mouseEvent -> System.out.printf("Bouton %s cliqué sur le nœud, %d click(s) %f x %f.", mouseEvent.getButton(), mouseEvent.getClickCount(), mouseEvent.getX(), mouseEvent.getY()).println()); 
-        _adapted.setOnMouseDragged(mouseEvent -> System.out.printf("La souris effectue un cliquer-tirer sur le nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
-        _adapted.setOnMouseEntered(mouseEvent -> System.out.printf("La souris entre sur le nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
-        _adapted.setOnMouseExited(mouseEvent -> System.out.printf("La souris sort du nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
-        _adapted.setOnMouseMoved(mouseEvent -> System.out.printf("La souris se déplace sur le nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
-        _adapted.setOnMousePressed(mouseEvent -> System.out.printf("Bouton %s pressé sur le nœud %f x %f.", mouseEvent.getButton(), mouseEvent.getX(), mouseEvent.getY()).println()); 
-        _adapted.setOnMouseReleased(mouseEvent -> System.out.printf("Bouton %s relâché sur le nœud %f x %f.", mouseEvent.getButton(), mouseEvent.getX(), mouseEvent.getY()).println()); 
+
+		//ajout evenement mouse dragged
+		_adapted.setOnMouseDragged(mouseEvent -> {
+			_adapted.setX(mouseEvent.getX()) ;
+			_adapted.setY(mouseEvent.getY());
+		}); 
+//		_adapted.setOnMouseClicked(mouseEvent -> System.out.printf("Bouton %s cliqué sur le nœud, %d click(s) %f x %f.", mouseEvent.getButton(), mouseEvent.getClickCount(), mouseEvent.getX(), mouseEvent.getY()).println()); 
+//        _adapted.setOnMouseDragged(mouseEvent -> System.out.printf("La souris effectue un cliquer-tirer sur le nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
+//        _adapted.setOnMouseEntered(mouseEvent -> System.out.printf("La souris entre sur le nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
+//        _adapted.setOnMouseExited(mouseEvent -> System.out.printf("La souris sort du nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
+//        _adapted.setOnMouseMoved(mouseEvent -> System.out.printf("La souris se déplace sur le nœud %f x %f.", mouseEvent.getX(), mouseEvent.getY()).println()); 
+//        _adapted.setOnMousePressed(mouseEvent -> System.out.printf("Bouton %s pressé sur le nœud %f x %f.", mouseEvent.getButton(), mouseEvent.getX(), mouseEvent.getY()).println()); 
+//        _adapted.setOnMouseReleased(mouseEvent -> System.out.printf("Bouton %s relâché sur le nœud %f x %f.", mouseEvent.getButton(), mouseEvent.getX(), mouseEvent.getY()).println()); 
 	}
 }

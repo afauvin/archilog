@@ -34,4 +34,5 @@ public abstract class Rectangle implements Shape {
                 _pos.getY() + vec.getY());
         return this;
     }
+
 }
