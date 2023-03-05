@@ -9,11 +9,21 @@ import java.awt.*;
 
 public class RectangleAwt extends Rectangle {
 
+	/**
+	 * Constructor
+	 * @param posX
+	 * @param posY
+	 * @param height
+	 * @param width
+	 */
 	public RectangleAwt(double posX, double posY, double height, double width) {
 		super.position(new Point2D.Double(posX, posY));
 		super.size(new Point2D.Double(width, height));
 	}
 
+	/**
+	 * Drawing the rectangle
+	 */
 	@Override
 	public void draw() {
         Graphics g = AwtContext.instance().graphics();

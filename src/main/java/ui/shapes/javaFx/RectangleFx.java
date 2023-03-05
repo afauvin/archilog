@@ -7,24 +7,24 @@ import ui.shapes.Rectangle;
 
 public class RectangleFx extends Rectangle {
 
-	javafx.scene.shape.Rectangle _adapted = new javafx.scene.shape.Rectangle();
-    Group _grp = null;
+	javafx.scene.shape.Rectangle adapted = new javafx.scene.shape.Rectangle();
+    Group grp = null;
 
 	public RectangleFx(double posX, double posY, double height, double width, Group grp) {
 		position(new Point2D.Double(posX, posY));
 		size(new Point2D.Double(width, height));
-		_grp = grp;
-		_grp.getChildren().add(_adapted);
+		this.grp = grp;
+		this.grp.getChildren().add(this.adapted);
 	}
 
 	@Override
 	public void draw() {
 		Point2D pos = position();
 		Point2D size = size();
-		_adapted.setX(pos.getX()- size.getX()/2);
-		_adapted.setY(pos.getY()- size.getY()/2);
-		_adapted.setWidth(size.getX());
-		_adapted.setHeight(size.getY());
-		_adapted.setFill(Color.BLUE);
+		this.adapted.setX(pos.getX()- size.getX()/2);
+		this.adapted.setY(pos.getY()- size.getY()/2);
+		this.adapted.setWidth(size.getX());
+		this.adapted.setHeight(size.getY());
+		this.adapted.setFill(Color.BLUE);
 	}
 }
