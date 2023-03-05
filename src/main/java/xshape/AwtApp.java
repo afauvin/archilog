@@ -1,7 +1,6 @@
 package xshape;
 
 import java.awt.*;
-import javax.swing.*;
 
 import ui.factories.ShapeFactory;
 import ui.factories.awt.ShapeFactoryAwt;
@@ -9,17 +8,7 @@ import ui.factories.awt.ShapeFactoryAwt;
 
 
 public class AwtApp extends XShape {
-    class JCanvas extends JPanel {
-        XShape _xshape = null;
-        public JCanvas(XShape xs) {
-            _xshape = xs;
-        }
-        public void paint(Graphics g) {
-            super.paint(g);
-            AwtContext.instance().graphics(g);
-            _xshape.draw();
-        }
-    }
+    
     
     @Override
     protected ShapeFactory createFactory() {
