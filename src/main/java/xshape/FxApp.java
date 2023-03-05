@@ -7,7 +7,7 @@ public class FxApp extends XShape {
 
     @Override
     protected ShapeFactory createFactory() {
-        return new ShapeFactoryFx(FxApplication._root);
+        return new ShapeFactoryFx(FxApplication.root);
     }
     @Override
     void run() {

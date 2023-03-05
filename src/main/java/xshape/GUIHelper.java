@@ -7,6 +7,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 
 class GUIHelper {
+    
     public static void showOnFrame(JComponent component, String frameName) {
         JFrame frame = new JFrame(frameName);
         WindowAdapter wa = new WindowAdapter() {
