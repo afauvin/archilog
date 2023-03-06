@@ -127,8 +127,10 @@ public class AwtApp extends XShape {
     void run() {
         JCanvas jc = new JCanvas(this);
         jc.setBackground(Color.WHITE);
-        new SimpleMouseListener(jc);  //gestion simple de la souris sur le canvas
-        new MoveDrawableMouseListener(jc);  //gestion un peu plus complexe de la souris sur le canvas
+        //new SimpleMouseListener(jc);  //gestion simple de la souris sur le canvas
+        //new MoveDrawableMouseListener(jc);  //gestion un peu plus complexe de la souris sur le canvas
+        new AwtMouseClickManagement(jc);
+        new AwtMoveShape(jc); //gestion du déplacement des formes
         jc.setPreferredSize(new Dimension(500, 500));
         GUIHelper.showOnFrame(jc, "XShape Swing/AWT Rendering");         
     }
