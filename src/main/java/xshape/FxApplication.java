@@ -11,6 +11,7 @@ public class FxApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("XShape JavaFx Rendering");
         Scene scene = new Scene(root, 500, 500);
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
