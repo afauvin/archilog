@@ -4,14 +4,11 @@ import java.awt.*;
 
 import ui.factories.ShapeFactory;
 import ui.factories.awt.ShapeFactoryAwt;
-
 import events.*;
 
 
 
 public class AwtApp extends XShape {
-    
-    private JCanvas jc;
     
     @Override
     protected ShapeFactory createFactory() {
@@ -20,7 +17,7 @@ public class AwtApp extends XShape {
 
     @Override
     void run() {
-        JCanvas jc = new JCanvas(this);
+        AwtCanvas jc = new AwtCanvas(this);
 
         jc.setBackground(Color.WHITE);
         jc.setPreferredSize(new Dimension(500, 500));
@@ -31,9 +28,5 @@ public class AwtApp extends XShape {
         GUIHelper.showOnFrame(jc, "XShape Swing/AWT Rendering");        
     }
 
-    public void setAwtCanvas(JCanvas awtJcanvas)
-    {
-        this.jc = awtJcanvas;
-    }
 }
 

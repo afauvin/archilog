@@ -39,7 +39,7 @@ public class JCanvas extends JPanel {
 
         public void addDrawable(Shape theShape) {
             drawables.add(theShape);
-            repaint();
+            //repaint();
         }
 
         public void removeDrawable(Shape d) {

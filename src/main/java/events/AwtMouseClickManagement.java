@@ -1,23 +1,22 @@
 package events;
 
-import java.awt.Point;
 import java.awt.event.MouseEvent;
 
 import java.awt.event.*;
 
-import xshape.JCanvas;
 import javax.swing.SwingUtilities;
 
 import ui.shapes.Shape;
 
 import ui.shapes.awt.RectangleAwt;
+import xshape.AwtCanvas;
 
 
 public class AwtMouseClickManagement extends MouseAdapter {
 
-    protected JCanvas canvas;
+    protected AwtCanvas canvas;
 
-    public AwtMouseClickManagement(JCanvas canvas) {
+    public AwtMouseClickManagement(AwtCanvas canvas) {
         super();
         this.canvas = canvas;
         canvas.addMouseListener(this);
@@ -32,10 +31,12 @@ public class AwtMouseClickManagement extends MouseAdapter {
     }
 
     protected void rightClickAction(MouseEvent e) {
-        Point p = e.getPoint();
         Shape rect = createDrawable(e);
         //if (canvas.isFree(rect.getRectangle())) {   /// FONCTION NE MARCHE PAS
-            canvas.addDrawable(rect);
+          
+            this.canvas.getDrawables().addDrawable(rect);
+            this.canvas.repaint(); 
+            //mettre un observer
         //}
     }
 

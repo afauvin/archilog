@@ -3,10 +3,6 @@ package ui.shapes;
 import java.util.LinkedList;
 import java.util.List;
 
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import xshape.JfxScene;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -16,10 +12,19 @@ public class Drawables implements ItfDrawables{
 
     private List drawables = new LinkedList();
 
+
+
     public void addDrawable(Shape theShape) {
         drawables.add(theShape);
         //repaint();        
     }
+
+
+    public List getDrawablesList()
+    {
+        return this.drawables;
+    }
+    
 
     public void removeDrawable(Shape d) {
         drawables.remove(d);
