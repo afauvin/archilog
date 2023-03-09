@@ -11,12 +11,10 @@ import java.awt.geom.Point2D;
 public class Drawables implements ItfDrawables{
 
     private List drawables = new LinkedList();
-
-
+    
 
     public void addDrawable(Shape theShape) {
-        drawables.add(theShape);
-        //repaint();        
+        drawables.add(theShape);   
     }
 
 
@@ -28,12 +26,10 @@ public class Drawables implements ItfDrawables{
 
     public void removeDrawable(Shape d) {
         drawables.remove(d);
-//        repaint();
     }
 
     public void clear() {
         drawables.clear();
-//        repaint();
     }
 
     public List findDrawables(Point2D p) {
@@ -47,9 +43,7 @@ public class Drawables implements ItfDrawables{
                 {
                     l.add(element);
                 }
-            }
-
-                    
+            }                   
         }
         return l;
 

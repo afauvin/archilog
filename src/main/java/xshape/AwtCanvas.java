@@ -2,6 +2,8 @@ package xshape;
 
 import java.util.Iterator;
 
+import events.AwtMouseEvents;
+
 import java.awt.*;
 
 import ui.shapes.Shape;
@@ -47,7 +49,6 @@ public class AwtCanvas extends AbsWindows {
  //       }
 
     }
-
 
 
 }

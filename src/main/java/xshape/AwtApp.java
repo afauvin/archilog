@@ -22,9 +22,8 @@ public class AwtApp extends XShape {
         jc.setBackground(Color.WHITE);
         jc.setPreferredSize(new Dimension(500, 500));
         
-       
-        new AwtMouseClickManagement(jc); //gestion du click
-        new AwtMoveShape(jc); //gestion du déplacement des formes
+        new AwtMouseEvents(jc); //gestion du click
+        
         GUIHelper.showOnFrame(jc, "XShape Swing/AWT Rendering");        
     }
 

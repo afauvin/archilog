@@ -1,6 +1,5 @@
 package xshape;
-import events.JfxMouseClickManagement;
-import events.JfxMoveShape;
+import events.JfxMouseEvents;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.stage.Stage;
@@ -16,12 +15,11 @@ public class FxApplication extends Application {
         
         //ajout evenement sur la scene
         this.jfxWindow = new JfxScene(root, 500, 500);
-        JfxMoveShape mouseMouve = new JfxMoveShape(jfxWindow);
-        JfxMouseClickManagement mouseClick = new JfxMouseClickManagement(jfxWindow);
-        mouseMouve.mousePressed(null);
-        mouseMouve.mouseDragged(null);
+        JfxMouseEvents mouseEvent = new JfxMouseEvents(jfxWindow);
 
-        mouseClick.mouseClicked(null);
+        mouseEvent.mousePressed(null);
+        mouseEvent.mouseDragged(null);
+        mouseEvent.mouseClicked(null);
         
         //primaryStage.setScene(scene);
         primaryStage.setScene(jfxWindow.getWindow());
